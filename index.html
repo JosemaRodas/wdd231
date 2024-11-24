@@ -9,51 +9,48 @@
     <title>WDD 231 - Web Frontend Development I - Jose Manuel Rodas Villarroel</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/javascript.js" defer></script>
 </head>
-
-
 <body>
     <header>
         <nav class="title">
-            <img src="images/profile.png" alt="josemanuel" class="img1">
+            <img src="images/profile.png" alt="josemanuel" class="profile-img">
             <h1>Jose Manuel Rodas Villarroel</h1>
-
         </nav>
-        <nav>
+        <nav class="main-nav">
             <a href="#" aria-current="page">Home</a>
             <a href="https://www.chamber.com/">Chamber</a>
             <a href="https://github.com/">GitHub Profile</a>
             <a href="https://linkedin.com">LinkedIn</a>
         </nav>
     </header>
-
     <main>
-        <section class="information">
-            <section class="certificado-container" >
-                <h2 class="certificado-header">Course Work</h2>
-                <ul>
+        <section class="info-section">
+            <section class="course-work">
+                <h2 class="section-header">Course Work</h2>
+                <ul class="course-list">
+                    <li>week 1</li>
+                    <li>week 2</li>
+                    <li>week 3</li>
+                    <li>week 4</li>
                 </ul>
+            </section>
+            <section class="location">
+                <h2 class="section-header">La Paz, Bolivia</h2>
+                <img src="images/lapazimg.webp" alt="La Paz, Bolivia" class="location-img">
+            </section>
         </section>
-
-        <section class="certificado-container">
-                <h2 class="certificado-header">La Paz, Bolivia</h2>
-                <img src="images/lapazimg.webp" alt="lapazimg.webp" class="img2">
-                
-        </section>
-        </section>
-       
-        <section class="information2"> 
-            <section class="certificado-container">
-                <div class="certificado-header">Certificado de Programación Web y Computación</div>
-                <div class="certificado-nav">
+        <section class="certificate-section">
+            <section class="certificate-container">
+                <div class="section-header">Web and Computer Programming Certificate</div>
+                <div class="nav-container">
                     <button class="nav-button" data-filter="todos">Todos</button>
                     <button class="nav-button" data-filter="cse">CSE</button>
                     <button class="nav-button" data-filter="wdd">WDD</button>
                 </div>
-                <div class="certificado-courses">
+                <div class="course-container">
                     <button class="course-button" data-category="cse">CSE 110</button>
                     <button class="course-button light" data-category="wdd">WDD 130</button>
                     <button class="course-button" data-category="cse">CSE 111</button>
@@ -61,17 +58,9 @@
                     <button class="course-button light" data-category="wdd">WDD 131</button>
                     <button class="course-button light" data-category="wdd">WDD 231</button>
                 </div>
-            </section>  
-        
-        
+            </section>
         </section>
-
-
-
-
     </main>
-
-
     <footer>
         <p id="copyright"></p>
         <p id="last-modified"></p>

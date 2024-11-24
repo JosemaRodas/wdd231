@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Hover Effect for Menu Items
   const navButtons = document.querySelectorAll('.nav-button');
   navButtons.forEach(button => {
       button.addEventListener('mouseover', () => {
@@ -10,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 
-  // Course List and Filter
   const courses = document.querySelectorAll('.course-button');
 
   const displayCourses = (filter) => {
@@ -23,10 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   };
 
-  // Display all courses by default
   displayCourses('todos');
 
-  // Filter Courses
   const filterButtons = document.querySelectorAll('.nav-button');
   filterButtons.forEach(button => {
       button.addEventListener('click', () => {

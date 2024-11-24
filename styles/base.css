@@ -1,31 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Tauri&display=swap');
 
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   background-color: #dfdfdf;
-  margin:0; 
-  padding:0; 
-  height:100%; 
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 
+.title {
+  background-color: rgb(0, 81, 148);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-.title { 
-    background-color: rgb(0, 81, 148);
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
-
-
-
- nav { 
+.main-nav {
   background-color: rgb(0, 0, 0);
   padding: 10px;
   display: flex;
@@ -33,8 +30,7 @@ body{
   align-items: center;
 }
 
-
- nav a {
+.main-nav a {
   display: block;
   padding: 0.5rem;
   text-decoration: none;
@@ -43,25 +39,23 @@ body{
   color: #fff;
 }
 
-nav a:hover {
+.main-nav a:hover {
   color: yellow;
-  background-color: var(--nav-hover-background-color);
 }
 
-h1 { 
+h1 {
   font-size: 30px;
-    padding: 20px;
-    color: rgb(255, 255, 255);
+  padding: 20px;
+  color: rgb(255, 255, 255);
 }
 
-
-main{
+main {
   margin: 0 auto;
   max-width: 1040px;
   gap: 1rem;
 }
 
-.img1 {
+.profile-img {
   width: 100px;
   height: auto;
   border: 1px solid rgb(0, 0, 0);
@@ -71,17 +65,15 @@ main{
   margin: 5px;
 }
 
-.img2 {
+.location-img {
   width: 150px;
   height: 150px;
   border: 1px solid rgb(0, 0, 0);
   padding: 2px;
   box-shadow: 0 0 30px gray;
-  float: left;
-  margin: 5px;
+  display: block;
+  margin: 10px auto;
 }
-
-
 
 footer {
   color: #ffffff;
@@ -89,43 +81,54 @@ footer {
   border-top: 1px solid #000;
   text-align: center;
   background-color: rgb(0, 81, 148);
-  justify-content: space-between;
   padding: 1rem;
-
 }
 
-
-.information {
+.info-section {
   display: flex;
   justify-content: space-around;
   padding: 1rem;
+  flex-wrap: wrap;
 }
 
-.information2 {
+.certificate-section {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   padding: 1rem;
+  width: 100%;
 }
 
-
-
-.certificado-container {
+.course-work, .location, .certificate-container {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   width: 400px;
   text-align: center;
+  margin: 10px;
 }
 
-.certificado-header {
+.certificate-container {
+  width: calc(100% - 20px);
+}
+
+.section-header {
   background-color: #004080;
   color: white;
   padding: 10px;
   font-size: 18px;
 }
 
-.certificado-nav {
+.course-list {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.course-list li {
+  margin: 10px 0;
+}
+
+.nav-container {
   display: flex;
   justify-content: center;
   background-color: #f0f0f0;
@@ -142,7 +145,7 @@ footer {
   border-radius: 5px;
 }
 
-.certificado-courses {
+.course-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -163,4 +166,19 @@ footer {
 .course-button.light {
   background-color: lightblue;
   color: black;
+}
+
+@media (max-width: 768px) {
+  .info-section, .certificate-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course-work, .location, .certificate-container {
+    width: 90%;
+  }
+
+  .certificate-container {
+    width: 100%;
+  }
 }
