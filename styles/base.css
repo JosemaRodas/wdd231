@@ -7,13 +7,23 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: #dfdfdf;
+  margin:0; 
+  padding:0; 
+  height:100%; 
+}
+
+
 .title { 
     background-color: rgb(0, 81, 148);
     padding: 10px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
  }
+
+
 
  nav { 
   background-color: rgb(84, 84, 84);
@@ -39,15 +49,9 @@ nav a:hover {
 }
 
 h1 { 
-    padding: 5px;
+  font-size: 30px;
+    padding: 20px;
     color: rgb(255, 255, 255);
-
-}
-
-
-header, footer {
-  margin: 0 auto;
-  max-width: 1040px;
 }
 
 
@@ -55,19 +59,18 @@ main{
   margin: 0 auto;
   max-width: 1040px;
   display: grid;
-  grid-template-columns: 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
 }
 
 .img1 {
-  width: 150px;
+  width: 100px;
   height: auto;
   border: 1px solid rgb(0, 0, 0);
   padding: 2px;
   box-shadow: 0 0 30px gray;
   float: right;
   margin: 5px;
-
 }
 
 .img2 {
@@ -83,13 +86,15 @@ main{
 
 
 footer {
+  color: #ffffff;
   margin-top: 1em;
   border-top: 1px solid #000;
   text-align: center;
-  grid-column: 2;
-  
-}
+  background-color: rgb(0, 81, 148);
+  justify-content: space-between;
+  padding: 1rem;
 
+}
 
 
 
@@ -107,15 +112,7 @@ footer {
 
 .card-title {
   text-align: center;
-  margin-bottom: 1rem;
-  text-decoration: underline;
+  margin-bottom: 2rem;
+  text-decoration: none;
 }
 
-.box {
-  text-align: center; 
-}
-
-.box li {
-  text-align: left; 
-  margin-bottom: 15px; 
-}
