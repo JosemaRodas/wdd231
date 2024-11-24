@@ -26,7 +26,7 @@ body{
 
 
  nav { 
-  background-color: rgb(84, 84, 84);
+  background-color: rgb(0, 0, 0);
   padding: 10px;
   display: flex;
   justify-content: space-evenly;
@@ -44,7 +44,7 @@ body{
 }
 
 nav a:hover {
-  color: var(--nav-hover-link-color);
+  color: yellow;
   background-color: var(--nav-hover-background-color);
 }
 
@@ -97,28 +97,70 @@ footer {
 
 .information {
   display: flex;
+  justify-content: space-around;
+  padding: 1rem;
 }
 
-.information {
+.information2 {
   display: flex;
-  
+  justify-content: space-around;
+  padding: 1rem;
 }
 
-.card {
-  width: 500px; 
-  height: auto;
-  margin: 5px;
-  border: 1px solid black;
-  padding: 2rem;
-  background-color: rgb(255, 255, 255);
-  color: #000;
+
+
+.certificado-container {
+  background-color: white;
   border-radius: 10px;
-
-}
-
-.card-title {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 400px;
   text-align: center;
-  margin-bottom: 2rem;
-  text-decoration: none;
 }
 
+.certificado-header {
+  background-color: #004080;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.certificado-nav {
+  display: flex;
+  justify-content: center;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.nav-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.certificado-courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+
+.course-button {
+  background-color: brown;
+  color: white;
+  border: none;
+  padding: 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100px;
+}
+
+.course-button.light {
+  background-color: lightblue;
+  color: black;
+}
