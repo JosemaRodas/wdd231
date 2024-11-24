@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review Form</title>
+  <!-- Add your CSS link here -->
+</head>
+<body>
+  <form method="get" action="review.html">
+    <label for="product-name">Product Name:</label>
+    <select id="product-name" name="product-name" required>
+      <option value="" disabled selected>Select a Product ...</option>
+      <!-- Product options will be populated by JavaScript -->
+    </select>
+
+    <fieldset>
+      <legend>Overall Rating:</legend>
+      <!-- Radio buttons for rating will be added here -->
+      <input type="radio" id="star1" name="rating" value="1" required><label for="star1">☆</label>
+      <input type="radio" id="star2" name="rating" value="2" required><label for="star2">☆</label>
+      <input type="radio" id="star3" name="rating" value="3" required><label for="star3">☆</label>
+      <input type="radio" id="star4" name="rating" value="4" required><label for="star4">☆</label>
+      <input type="radio" id="star5" name="rating" value="5" required><label for="star5">☆</label>
+    </fieldset>
+
+    <label for="installation-date">Date of Installation:</label>
+    <input type="date" id="installation-date" name="installation-date" required>
+
+    <fieldset>
+      <legend>Useful Features (Check all that apply):</legend>
+      <input type="checkbox" id="durability" name="feature" value="Durability"><label for="durability">Durability</label>
+      <input type="checkbox" id="ease-of-use" name="feature" value="Ease of Use"><label for="ease-of-use">Ease of Use</label>
+      <input type="checkbox" id="performance" name="feature" value="Performance"><label for="performance">Performance</label>
+      <input type="checkbox" id="design" name="feature" value="Design"><label for="design">Design</label>
+    </fieldset>
+
+    <label for="written-review">Written Review (Optional):</label>
+    <textarea id="written-review" name="written-review"></textarea>
+
+    <label for="user-name">Your Name (Optional):</label>
+    <input type="text" id="user-name" name="user-name">
+
+    <input type="submit" value="Post Review">
+  </form>
+
+  <!-- Common footer content goes here -->
+
+  <script>
+    // Product Array
+    const products = [
+      { id: 'fc-1888', name: 'flux capacitor', 'avg-rating': 4.5 },
+      { id: 'fc-2050', name: 'power laces', 'averagerating': 4.7 },
+      { id: 'fs-1987', name: 'time circuits', 'averagerating': 3.5 },
+      { id: 'ac-2000', name: 'low voltage reactor', 'averagerating': 3.9 },
+      { id: 'jj-1969', name: 'warp equalizer', 'averagerating': 5.0 }
+    ];
+
+    // Populate product options
+    const selectElement = document.getElementById('product-name');
+    products.forEach(product => {
+      const option = document.createElement('option');
+      option.value = product.id;
+      option.textContent = product.name;
+      selectElement.appendChild(option);
+    });
+
+    // LocalStorage review counter
+    if (window.location.pathname.includes('review.html')) {
+      const reviewCount = localStorage.getItem('reviewCount') || 0;
+      localStorage.setItem('reviewCount', parseInt(reviewCount) + 1);
+    }
+  </script>
+</body>
+</html>

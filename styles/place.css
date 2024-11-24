@@ -1,0 +1,155 @@
+:root {
+  --primary-color: #000; 
+  --secondary-color: #fff; 
+  --accent-color: #FF0000; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+
+header {
+  color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  background-color: var(--accent-color);
+  justify-content: center;
+  padding: 2rem;
+  font-size: large;
+  width: auto;
+}
+
+header::after {
+  display: block;
+  width: 100%;
+  height: 2px; 
+  background-color: var(--accent-color);
+}
+
+.info-box {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  width: 300px; 
+  text-align: center;
+}
+
+.info-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.info-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.info-list li {
+  margin-bottom: 5px;
+}
+
+.info-list li span {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.weather-box {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  width: 300px; 
+  text-align: center;
+
+}
+
+.weather-logo {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+}
+
+.weather-info {
+  flex: 1;
+}
+
+.weather-info h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.weather-info p {
+  margin-bottom: 5px;
+}
+
+.weather-info span {
+  font-weight: bold;
+}
+
+footer {
+  background-color: rgb(0, 42, 255);
+  color: var(--secondary-color);
+  margin-top: 1em;
+  border-top: 1px solid var(--primary-color);
+  text-align: center;
+  padding: 2rem;
+}
+
+footer::after {
+  display: block;
+  width: 50px;
+  height: 2px; 
+  background-color: var(--accent-color);
+  margin: 0 auto;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  gap: 1rem;
+
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+@media (min-width: 501px) {
+  .grid {
+
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-around; 
+  }
+  body {
+
+    background-image: url(https://th.bing.com/th/id/R.e1b5455a5e8f2520704fe5ba4ecc20b0?rik=2mJ%2bmu6z3YgEkw&riu=http%3a%2f%2fwww.canadiantraveller.com%2fmedia%2fimage%2f58553_max.jpg&ehk=VZ2Q9%2bozDGZrk3YZB2BlNO1MF3x2k7lytMH%2bYeFtVwU%3d&risl=&pid=ImgRaw&r=0);
+  
+    background-repeat: no-repeat;
+  
+    background-size: cover;
+  
+  }
+  
+}

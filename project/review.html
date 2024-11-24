@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Jose Manuel Rodas Villarroel -Final Project">
+    <meta name="author" content="Jose Manuel Rodas">
+    <title>Final Project</title>
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/javascript.js" defer></script>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/index-large.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Classic Game Store</h1>
+    <button id= "abrir" class="abrir-menu"> <i class="bi bi-list"></i></button>
+        <nav id= "nav" class="nav">
+    <button id= "cerrar" class="cerrar-menu"><i class="bi bi-x-lg"></i></button>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Old</a></li>
+                <li><a href="index.html">New</a></li>
+                <li><a href="index.html">cheapest</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="form.html">Reviews</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+<main>
+  <h1>Thank you for your review/Request!</h1>
+
+  <p>We have received your Review//Request and are processing it.</p>
+
+  <div id="review-counter">
+  </div>
+
+  <a href="index.html" class="button" >Return to store</a>
+
+  
+  <div>
+    <form method="get" action="review.html">
+        <label for="game-request">Any game request? Please let us know:</label>
+        <input type="text" id="game-request" name="game-request" required>
+      
+        <label for="written-review">Written request:</label>
+        <textarea id="written-review" name="written-review"></textarea>
+      
+        <label for="user-name">Name (optional):</label>
+        <input type="text" id="user-name" name="user-name">
+      
+        <input type="submit" value="Post Request">
+      </form>
+      
+ </div>
+</main>
+
+
+  <footer>
+    <p id="copyright"></p>
+    <p id="last-modified"></p>
+
+</footer>
+</body>
+</html>
