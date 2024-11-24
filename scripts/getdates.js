@@ -4,4 +4,8 @@ const lastModifiedElement = document.getElementById('last-modified');
 const currentYear = new Date().getFullYear();
 copyrightElement.textContent = `Copyright © ${currentYear} 🌴 Jose Manuel Rodas 🌴 La Paz, Bolivia`;
 
-lastModifiedElement.textContent = `Document last modified: ${document.lastModified}`;
+const lastModifiedDate = new Date(document.lastModified);
+lastModifiedDate.setHours(lastModifiedDate.getHours() - 5);
+const formattedDate = lastModifiedDate.toLocaleString();
+
+lastModifiedElement.textContent = `Document last modified: ${formattedDate}`;
