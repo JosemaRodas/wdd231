@@ -58,8 +58,6 @@ h1 {
 main{
   margin: 0 auto;
   max-width: 1040px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
 }
 
@@ -97,6 +95,14 @@ footer {
 }
 
 
+.information {
+  display: flex;
+}
+
+.information {
+  display: flex;
+  
+}
 
 .card {
   width: 500px; 
