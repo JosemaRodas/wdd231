@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Business One",
+        "address": "123 Main St",
+        "phone": "123-456-7890",
+        "website": "http://www.businessone.com",
+        "image": "businessone.png",
+        "membership": 1
+    },
+    {
+        "name": "Business Two",
+        "address": "456 Elm St",
+        "phone": "987-654-3210",
+        "website": "http://www.businesstwo.com",
+        "image": "businesstwo.png",
+        "membership": 2
+    },
+    {
+        "name": "Business Three",
+        "address": "789 Oak St",
+        "phone": "555-555-5555",
+        "website": "http://www.businessthree.com",
+        "image": "businessthree.png",
+        "membership": 3
+    },
+    {
+        "name": "Business Four",
+        "address": "101 Pine St",
+        "phone": "444-444-4444",
+        "website": "http://www.businessfour.com",
+        "image": "businessfour.png",
+        "membership": 2
+    },
+    {
+        "name": "Business Five",
+        "address": "202 Maple St",
+        "phone": "333-333-3333",
+        "website": "http://www.businessfive.com",
+        "image": "businessfive.png",
+        "membership": 1
+    },
+    {
+        "name": "Business Six",
+        "address": "303 Cedar St",
+        "phone": "222-222-2222",
+        "website": "http://www.businesssix.com",
+        "image": "businesssix.png",
+        "membership": 3
+    },
+    {
+        "name": "Business Seven",
+        "address": "404 Birch St",
+        "phone": "111-111-1111",
+        "website": "http://www.businessseven.com",
+        "image": "businessseven.png",
+        "membership": 2
+    }
+]

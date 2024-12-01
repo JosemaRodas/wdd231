@@ -1,85 +1,96 @@
-/* Normalize styles */
+@import url('https://fonts.googleapis.com/css2?family=Tauri&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8f8f8;
-    margin: 0;
-  }
-  
-  header, footer {
-    background-color: #0056A1;
+}
+
+body {
+    font-family: 'Tauri', sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #004080;
     color: white;
+    padding: 1rem;
     text-align: center;
-    padding: 15px 0;
-  }
-  
-  header h1 {
-    margin-bottom: 10px;
-  }
-  
-  nav ul {
+}
+
+nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  nav a {
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
     text-decoration: none;
-    color: white;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  #toggle-view {
-    margin: 20px 0;
-    padding: 10px 15px;
-    background-color: #0056A1;
-    color: white;
-    border: none;
+}
+
+main {
+    padding: 1rem;
+}
+
+.directory-toggle {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.directory-toggle button {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
     cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  #directory-view {
+}
+
+#member-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
-  }
-  
-  .card, .list-item {
-    border: 1px solid #ddd;
-    padding: 15px;
+    gap: 1rem;
+}
+
+.member-card {
     background-color: white;
-    text-align: center;
-    border-radius: 5px;
-  }
-  
-  .card img, .list-item img {
-    max-width: 100px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .list-item {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    width: calc(33.333% - 2rem);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.member-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.member-card h3 {
+    margin-top: 0.5rem;
+}
+
+.list-view .member-card {
     width: 100%;
-  }
-  
-  .grid-view .card {
-    flex: 1 1 calc(30% - 20px);
-  }
-  
-  footer p {
-    font-size: 14px;
-  }
-  
+}
+
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    #member-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
