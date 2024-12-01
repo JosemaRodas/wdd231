@@ -1,58 +1,58 @@
 [
     {
-        "name": "Business One",
-        "address": "123 Main St",
-        "phone": "123-456-7890",
-        "website": "http://www.businessone.com",
-        "image": "businessone.png",
+        "name": "Coffee House La Paz",
+        "address": "Av. Arce 1234",
+        "phone": "789-456-1230",
+        "website": "http://www.coffehouselapaz.com",
+        "image": "generic1.png",
         "membership": 1
     },
     {
-        "name": "Business Two",
-        "address": "456 Elm St",
-        "phone": "987-654-3210",
-        "website": "http://www.businesstwo.com",
-        "image": "businesstwo.png",
+        "name": "Tech Solutions SRL",
+        "address": "Calle Comercio 567",
+        "phone": "654-321-0987",
+        "website": "http://www.techsolutions.bo",
+        "image": "generic2.png",
         "membership": 2
     },
     {
-        "name": "Business Three",
-        "address": "789 Oak St",
-        "phone": "555-555-5555",
-        "website": "http://www.businessthree.com",
-        "image": "businessthree.png",
+        "name": "Andes Tours",
+        "address": "Calle Sagarnaga 789",
+        "phone": "555-123-4567",
+        "website": "http://www.andestours.bo",
+        "image": "generic3.png",
         "membership": 3
     },
     {
-        "name": "Business Four",
-        "address": "101 Pine St",
-        "phone": "444-444-4444",
-        "website": "http://www.businessfour.com",
-        "image": "businessfour.png",
+        "name": "Green Market",
+        "address": "Av. 20 de Octubre 202",
+        "phone": "444-987-6543",
+        "website": "http://www.greenmarket.bo",
+        "image": "generic4.png",
         "membership": 2
     },
     {
-        "name": "Business Five",
-        "address": "202 Maple St",
-        "phone": "333-333-3333",
-        "website": "http://www.businessfive.com",
-        "image": "businessfive.png",
+        "name": "Bolivian Art Gallery",
+        "address": "Calle Jaen 101",
+        "phone": "333-222-1111",
+        "website": "http://www.bolivianartgallery.bo",
+        "image": "generic5.png",
         "membership": 1
     },
     {
-        "name": "Business Six",
-        "address": "303 Cedar St",
-        "phone": "222-222-2222",
-        "website": "http://www.businesssix.com",
-        "image": "businesssix.png",
+        "name": "Eco Lodge",
+        "address": "Zona Sur 303",
+        "phone": "222-111-3333",
+        "website": "http://www.ecolodge.bo",
+        "image": "generic6.png",
         "membership": 3
     },
     {
-        "name": "Business Seven",
-        "address": "404 Birch St",
-        "phone": "111-111-1111",
-        "website": "http://www.businessseven.com",
-        "image": "businessseven.png",
+        "name": "Fitness Gym La Paz",
+        "address": "Av. Saavedra 404",
+        "phone": "111-222-3333",
+        "website": "http://www.fitnessgym.bo",
+        "image": "generic7.png",
         "membership": 2
     }
 ]
