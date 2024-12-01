@@ -1,0 +1,85 @@
+/* Normalize styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+    margin: 0;
+  }
+  
+  header, footer {
+    background-color: #0056A1;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+  }
+  
+  header h1 {
+    margin-bottom: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  #toggle-view {
+    margin: 20px 0;
+    padding: 10px 15px;
+    background-color: #0056A1;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #directory-view {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .card, .list-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .card img, .list-item img {
+    max-width: 100px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .list-item {
+    width: 100%;
+  }
+  
+  .grid-view .card {
+    flex: 1 1 calc(30% - 20px);
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
+  
