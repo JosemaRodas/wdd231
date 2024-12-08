@@ -10,6 +10,9 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #f9f9f9; /* Color de fondo claro */
     color: #333; /* Texto oscuro para buen contraste */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -36,6 +39,7 @@ nav ul li a {
 }
 
 main {
+    flex: 1;
     padding: 1rem;
 }
 
@@ -55,67 +59,57 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding: 2rem; /* Añadir padding para evitar superposición */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
 }
 
 .cta-button {
+    display: block;
     background-color: #004d40; /* Verde oscuro */
     color: white;
     padding: 1rem 2rem;
     text-decoration: none;
     border-radius: 5px;
+    margin-top: 1rem; /* Añadir margen superior para espacio */
+}
+
+.horizontal-box-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1rem;
 }
 
 .events, .weather, .forecast, .spotlights {
-    margin: 2rem 0;
+    flex: 1 1 30%; /* Asegurar que todas las cajas tengan el mismo tamaño */
+    margin: 1rem;
+    text-align: center;
 }
 
-.events-box, .weather-box, .forecast-box {
+.events-box, .weather-box, .forecast-box, .spotlight-card {
     background-color: #ffffff; /* Blanco */
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-bottom: 1rem;
 }
 
-.spotlights .spotlight-card {
-    background-color: #ffffff; /* Blanco */
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.spotlights .spotlight-card img {
+.spotlight-card img {
     max-width: 100%;
     border-radius: 10px;
 }
+
 
 footer {
     background-color: #004d40; /* Verde oscuro */
     color: white;
     text-align: center;
     padding: 1rem;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+    margin-top: auto;
 }
 
 .social-media img {
     width: 20px;
     margin: 0 5px;
-}
-
-address {
-    margin: 10px 0;
-}
-
-@media (max-width: 768px) {
-    #member-container {
-        flex-direction: column;
-        align-items: center;
-    }
 }
