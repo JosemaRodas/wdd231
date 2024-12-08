@@ -1,36 +1,29 @@
+// Obtener datos de los miembros y mostrarlos
 async function getMembers() {
     const response = await fetch('data/members.json');
     const members = await response.json();
-    displayMembers(members);
     displaySpotlights(members);
 }
 
-function displayMembers(members) {
-    const container = document.getElementById('member-container');
-    container.innerHTML = '';
-    members.forEach(member => {
-        const memberCard = document.createElement('div');
-        memberCard.classList.add('member-card');
-        memberCard.innerHTML = `
+function displaySpotlights(members) {
+    const spotlightsContainer = document.getElementById('spotlights-container');
+    const goldAndSilverMembers = members.filter(member => member.membership === 2 || member.membership === 3);
+    const randomSpotlights = goldAndSilverMembers.sort(() => 0.5 - Math.random()).slice(0, 3);
+    spotlightsContainer.innerHTML = '';
+    randomSpotlights.forEach(member => {
+        const spotlightCard = document.createElement('div');
+        spotlightCard.classList.add('spotlight-card');
+        spotlightCard.innerHTML = `
             <img src="images/${member.image}" alt="${member.name}">
             <h3>${member.name}</h3>
-            <p>${member.address}</p>
-            <p>${member.phone}</p>
-            <p><a href="${member.website}">${member.website}</a></p>
+            <p>${member.tagline}</p>
+            <p>Email: <a href="mailto:${member.email}">${member.email}</a></p>
+            <p>Phone: ${member.phone}</p>
+            <p>Website: <a href="${member.website}">${member.website}</a></p>
         `;
-        container.appendChild(memberCard);
+        spotlightsContainer.appendChild(spotlightCard);
     });
 }
-
-document.getElementById('grid-view').addEventListener('click', () => {
-    document.getElementById('member-container').classList.add('grid-view');
-    document.getElementById('member-container').classList.remove('list-view');
-});
-
-document.getElementById('list-view').addEventListener('click', () => {
-    document.getElementById('member-container').classList.add('list-view');
-    document.getElementById('member-container').classList.remove('grid-view');
-});
 
 document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('last-modified').textContent = `Last Modified: ${document.lastModified}`;
@@ -41,8 +34,8 @@ getMembers();
 async function getWeather() {
     const apiKey = 'YOUR_API_KEY'; // Reemplaza con tu propia API Key de OpenWeatherMap
     const city = 'La Paz';
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
-    const weatherData = await response.json();
+    const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
+    const weatherData = await weatherResponse.json();
     displayWeather(weatherData);
 
     // Obtener la previsión meteorológica de 3 días
@@ -71,27 +64,6 @@ function displayForecast(forecastData) {
             <p>Weather: ${day.weather[0].description}</p>
         `;
         forecastBox.appendChild(forecastItem);
-    });
-}
-
-// Mostrar los "spotlights" de los miembros
-function displaySpotlights(members) {
-    const spotlightsContainer = document.getElementById('spotlights-container');
-    const goldAndSilverMembers = members.filter(member => member.membership === 2 || member.membership === 3);
-    const randomSpotlights = goldAndSilverMembers.sort(() => 0.5 - Math.random()).slice(0, 3);
-    spotlightsContainer.innerHTML = '';
-    randomSpotlights.forEach(member => {
-        const spotlightCard = document.createElement('div');
-        spotlightCard.classList.add('spotlight-card');
-        spotlightCard.innerHTML = `
-            <img src="images/${member.image}" alt="${member.name}">
-            <h3>${member.name}</h3>
-            <p>${member.address}</p>
-            <p>${member.phone}</p>
-            <p><a href="${member.website}">${member.website}</a></p>
-            <p>Membership Level: ${member.membership === 3 ? 'Gold' : 'Silver'}</p>
-        `;
-        spotlightsContainer.appendChild(spotlightCard);
     });
 }
 

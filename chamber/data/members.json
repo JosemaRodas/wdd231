@@ -1,58 +1,112 @@
 [
     {
         "name": "Coffee House La Paz",
+        "tagline": "Best Coffee in Town",
         "address": "Av. Arce 1234",
         "phone": "789-456-1230",
+        "email": "info@coffehouselapaz.com",
         "website": "http://www.coffehouselapaz.com",
-        "image": "generic1.png",
-        "membership": 1
+        "image": "https://content.r9cdn.net/rimg/dimg/59/66/56b9c63c-city-13346-164dcfc0a70.jpg?width=1750&height=1000&xhint=3450&yhint=2249&crop=true",
+        "membership": 3
     },
     {
         "name": "Tech Solutions SRL",
+        "tagline": "Innovative Tech Solutions",
         "address": "Calle Comercio 567",
         "phone": "654-321-0987",
+        "email": "info@techsolutions.bo",
         "website": "http://www.techsolutions.bo",
         "image": "generic2.png",
         "membership": 2
     },
     {
         "name": "Andes Tours",
+        "tagline": "Adventure Awaits",
         "address": "Calle Sagarnaga 789",
         "phone": "555-123-4567",
+        "email": "info@andestours.bo",
         "website": "http://www.andestours.bo",
         "image": "generic3.png",
         "membership": 3
     },
     {
         "name": "Green Market",
+        "tagline": "Fresh Organic Produce",
         "address": "Av. 20 de Octubre 202",
         "phone": "444-987-6543",
+        "email": "info@greenmarket.bo",
         "website": "http://www.greenmarket.bo",
         "image": "generic4.png",
         "membership": 2
     },
     {
         "name": "Bolivian Art Gallery",
+        "tagline": "Art for Everyone",
         "address": "Calle Jaen 101",
         "phone": "333-222-1111",
+        "email": "info@bolivianartgallery.bo",
         "website": "http://www.bolivianartgallery.bo",
         "image": "generic5.png",
         "membership": 1
     },
     {
         "name": "Eco Lodge",
+        "tagline": "Eco-Friendly Accommodations",
         "address": "Zona Sur 303",
         "phone": "222-111-3333",
+        "email": "info@ecolodge.bo",
         "website": "http://www.ecolodge.bo",
         "image": "generic6.png",
         "membership": 3
     },
     {
         "name": "Fitness Gym La Paz",
+        "tagline": "Stay Fit, Stay Healthy",
         "address": "Av. Saavedra 404",
         "phone": "111-222-3333",
+        "email": "info@fitnessgym.bo",
         "website": "http://www.fitnessgym.bo",
         "image": "generic7.png",
         "membership": 2
+    },
+    {
+        "name": "La Paz Bookstore",
+        "tagline": "A World of Books",
+        "address": "Av. 6 de Agosto 789",
+        "phone": "789-456-9999",
+        "email": "info@lapazbookstore.com",
+        "website": "http://www.lapazbookstore.com",
+        "image": "generic8.png",
+        "membership": 3
+    },
+    {
+        "name": "Mountain Adventures",
+        "tagline": "Experience the Thrill",
+        "address": "Calle Potosi 456",
+        "phone": "654-321-1234",
+        "email": "info@mountainadventures.bo",
+        "website": "http://www.mountainadventures.bo",
+        "image": "generic9.png",
+        "membership": 2
+    },
+    {
+        "name": "La Paz Artisans",
+        "tagline": "Handmade with Love",
+        "address": "Av. Murillo 567",
+        "phone": "555-123-6789",
+        "email": "info@lapazartisans.bo",
+        "website": "http://www.lapazartisans.bo",
+        "image": "generic10.png",
+        "membership": 2
+    },
+    {
+        "name": "Health & Wellness Clinic",
+        "tagline": "Your Health, Our Priority",
+        "address": "Calle Sucre 101",
+        "phone": "444-987-1234",
+        "email": "info@wellnessclinic.bo",
+        "website": "http://www.wellnessclinic.bo",
+        "image": "generic11.png",
+        "membership": 3
     }
 ]

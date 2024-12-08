@@ -8,15 +8,15 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9; /* Color de fondo claro */
-    color: #333; /* Texto oscuro para buen contraste */
+    background-color: #f9f9f9; 
+    color: #333; 
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 header {
-    background-color: #004d40; /* Verde oscuro */
+    background-color: #004d40; 
     color: white;
     padding: 1rem;
     text-align: center;
@@ -59,18 +59,18 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 2rem; /* Añadir padding para evitar superposición */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    padding: 2rem; 
+    background-color: rgba(0, 0, 0, 0.5); 
 }
 
 .cta-button {
     display: block;
-    background-color: #004d40; /* Verde oscuro */
+    background-color: #004d40; 
     color: white;
     padding: 1rem 2rem;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 1rem; /* Añadir margen superior para espacio */
+    margin-top: 1rem; 
 }
 
 .horizontal-box-container {
@@ -81,13 +81,13 @@ main {
 }
 
 .events, .weather, .forecast, .spotlights {
-    flex: 1 1 30%; /* Asegurar que todas las cajas tengan el mismo tamaño */
+    flex: 1 1 30%; 
     margin: 1rem;
     text-align: center;
 }
 
 .events-box, .weather-box, .forecast-box, .spotlight-card {
-    background-color: #ffffff; /* Blanco */
+    background-color: #ffffff; 
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 1rem;
@@ -101,7 +101,7 @@ main {
 
 
 footer {
-    background-color: #004d40; /* Verde oscuro */
+    background-color: #004d40; 
     color: white;
     text-align: center;
     padding: 1rem;
@@ -112,4 +112,33 @@ footer {
 .social-media img {
     width: 20px;
     margin: 0 5px;
+}
+
+
+
+.spotlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.spotlight-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff; /* Blanco */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.spotlight-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.spotlight-info {
+    text-align: center;
 }
