@@ -1,4 +1,3 @@
-// Obtener datos de los miembros y mostrarlos
 async function getMembers() {
     const response = await fetch('data/members.json');
     const members = await response.json();
@@ -30,15 +29,13 @@ document.getElementById('last-modified').textContent = `Last Modified: ${documen
 
 getMembers();
 
-// Obtener datos del clima
 async function getWeather() {
-    const apiKey = 'YOUR_API_KEY'; // Reemplaza con tu propia API Key de OpenWeatherMap
+    const apiKey = 'YOUR_API_KEY'; 
     const city = 'La Paz';
     const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
     const weatherData = await weatherResponse.json();
     displayWeather(weatherData);
 
-    // Obtener la previsión meteorológica de 3 días
     const forecastResponse = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric&cnt=3`);
     const forecastData = await forecastResponse.json();
     displayForecast(forecastData);
