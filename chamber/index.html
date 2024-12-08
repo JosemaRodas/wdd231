@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directory page of La Paz Chamber of Commerce">
+    <meta name="author" content="Jose Manuel Rodas Villarroel">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="La Paz Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBx...">    <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html">
+    <title>Directory - La Paz Chamber of Commerce</title>
+</head>
+<body>
+    <header>
+        <h1>La Paz Chamber of Commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="directory-toggle">
+            <button id="grid-view">Grid View</button>
+            <button id="list-view">List View</button>
+        </section>
+        <section id="member-container" class="grid-view"></section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Jose Manuel Rodas. WDD 231</p>
+        <p id="last-modified"></p>
+        <address>
+            10 Rue De La Paix, La Paz, Bolivia<br>
+            Email: Josemarodas.324@gmail.com<br>
+            Phone: (591) 670-49744
+        </address>
+        <div class="social-media">
+            <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+            <a href="#"><img src="images/x.jpg" alt="Twitter"></a>
+            <a href="#"><img src="images/linkedin.jpg" alt="LinkedIn"></a>
+        </div>
+    </footer>
+    <script src="scripts/script.js" defer></script>
+</body>
+</html>
