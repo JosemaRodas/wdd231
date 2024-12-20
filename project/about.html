@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="WDD 231 - Web Frontend Development I - Jose Manuel Rodas Villarroel - Final Project">
-        <meta name="author" content="Jose Manuel Rodas">
-        <title>Final Project</title>
-        <script src="scripts/javascript.js" defer></script>
-        <link rel="stylesheet" href="styles/index.css">
-        <link rel="stylesheet" href="styles/index-large.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    </head>
-    <body>
-        <header>
-            <h1>Economic Forum WDD - 231</h1>
-            <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
-            <nav id="nav" class="nav">
-                <button id="cerrar" class="cerrar-menu"><i class="bi bi-x-lg"></i></button>
-                <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Old</a></li>
-                    <li><a href="#">New</a></li>
-                    <li><a href="#">Cheapest</a></li>
-                    <li><a href="about.html">About us</a></li>
-                    <li><a href="forum.html">Forum</a></li>
-                    <li><a href="form.html">Reviews</a></li>
-                </ul>
-            </nav>
-        </header>
-    <main>
-        <section class="card">
-            <h2 class="card-title">Jose Manuel / Admin</h2>
-            <img src="images/profile.webp" alt="Jose Manuel" class="img1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 - Web Frontend Development I - Jose Manuel Rodas Villarroel - Final Project">
+    <meta name="author" content="Jose Manuel Rodas">
+    <title>Final Project</title>
+    <script src="scripts/javascript.js" defer></script>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/index-large.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link"></a>
+    <header role="banner">
+        <h1>Economic Forum WDD - 231</h1>
+        <button id="abrir" class="abrir-menu" aria-label="Open navigation menu"><i class="bi bi-list" aria-hidden="true"></i></button>
+        <nav id="nav" class="nav" role="navigation">
+            <button id="cerrar" class="cerrar-menu" aria-label="Close navigation menu"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Old Books</a></li>
+                <li><a href="#">New Books</a></li>
+                <li><a href="#">Cheapest Books</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="form.html">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="card" aria-labelledby="admin-heading">
+            <h2 id="admin-heading" class="card-title">Jose Manuel / Admin</h2>
+            <img src="images/profile.webp" alt="Profile picture of Jose Manuel" class="img1">
             <p>Hello! My name is Jose Manuel. I'm 21 years old and I live in La Paz, Bolivia. I’ve been interested in learning about software development for a year now. In addition to my passion for software development, I enjoy exploring new technologies and experimenting with coding languages. My goal is to become proficient in various programming languages and contribute to innovative projects. Overall, I am excited about the future and the opportunities that lie ahead.</p>
 
             <h2 class="card-title">My Passion for Economics</h2>
             <p>I have a deep passion for economics, particularly for understanding how free markets, human creativity, and cooperation contribute to prosperity. Inspired by the Austrian School of Economics, I believe in the power of individual action and entrepreneurial spirit to transform societies. My dream is to apply these principles to help improve Bolivia’s economic future. Through my studies and research, I aim to dismantle common economic misconceptions and inspire others to appreciate the role of economic freedom in fostering innovation and growth.</p>
 
             <h2 class="card-title">The Beauty of La Paz</h2>
-            <img src="images/hero.jpeg" alt="La Paz, Bolivia" class="img2">
+            <img src="images/hero.jpeg" alt="Scenic view of La Paz, Bolivia" class="img2">
             <p>La Paz, Bolivia, is the world’s highest administrative capital, situated at about 3,650 meters above sea level in a canyon created by the Choqueyapu River. The city’s streets are a blend of modern skyscrapers, colonial architecture, and vibrant markets. It’s a place where history and modernity coexist, offering breathtaking views and unique cultural experiences. I am proud to call La Paz my home and to be part of a community rich in traditions, resilience, and creativity.</p>
         </section>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <p id="copyright"></p>
         <p id="last-modified"></p>
     </footer>
