@@ -66,27 +66,6 @@ function displayForecast(forecastData) {
 
 getWeather();
 
-document.addEventListener("DOMContentLoaded", function () {
-    const lastVisit = localStorage.getItem("lastVisit");
-    const now = Date.now();
-
-    if (lastVisit) {
-        const lastVisitDate = new Date(parseInt(lastVisit, 10));
-        const daysBetween = Math.floor((now - lastVisitDate) / (1000 * 60 * 60 * 24));
-
-        if (daysBetween < 1) {
-            sidebar.innerHTML += "<p>Back so soon! Awesome!</p>";
-        } else if (daysBetween === 1) {
-            sidebar.innerHTML += "<p>You last visited 1 day ago.</p>";
-        } else {
-            sidebar.innerHTML += `<p>You last visited ${daysBetween} days ago.</p>`;
-        }
-    } else {
-        sidebar.innerHTML += "<p>Welcome! Let us know if you have any questions.</p>";
-    }
-
-    localStorage.setItem("lastVisit", now);
-});
 
 document.addEventListener("DOMContentLoaded", function () {
     const lastVisit = localStorage.getItem("lastVisit");
