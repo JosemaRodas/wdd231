@@ -66,8 +66,50 @@ function displayForecast(forecastData) {
 
 getWeather();
 
-document.addEventListener('DOMContentLoaded', function() {
-    const timestampField = document.getElementById('timestamp');
-    timestampField.value = new Date().toISOString();
+document.addEventListener("DOMContentLoaded", function () {
+    const lastVisit = localStorage.getItem("lastVisit");
+    const now = Date.now();
 
-    const modals = document.querySelectorAll}
+    if (lastVisit) {
+        const lastVisitDate = new Date(parseInt(lastVisit, 10));
+        const daysBetween = Math.floor((now - lastVisitDate) / (1000 * 60 * 60 * 24));
+
+        if (daysBetween < 1) {
+            sidebar.innerHTML += "<p>Back so soon! Awesome!</p>";
+        } else if (daysBetween === 1) {
+            sidebar.innerHTML += "<p>You last visited 1 day ago.</p>";
+        } else {
+            sidebar.innerHTML += `<p>You last visited ${daysBetween} days ago.</p>`;
+        }
+    } else {
+        sidebar.innerHTML += "<p>Welcome! Let us know if you have any questions.</p>";
+    }
+
+    localStorage.setItem("lastVisit", now);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const lastVisit = localStorage.getItem("lastVisit");
+    const now = Date.now();
+    const currentDate = new Date().toLocaleDateString();
+    document.getElementById("current-date").textContent = currentDate;
+
+    const visitorMessage = document.getElementById("visitor-message");
+
+    if (lastVisit) {
+        const lastVisitDate = new Date(parseInt(lastVisit, 10));
+        const daysBetween = Math.floor((now - lastVisitDate) / (1000 * 60 * 60 * 24));
+
+        if (daysBetween < 1) {
+            visitorMessage.textContent = "Back so soon! Awesome!";
+        } else if (daysBetween === 1) {
+            visitorMessage.textContent = "You last visited 1 day ago.";
+        } else {
+            visitorMessage.textContent = `You last visited ${daysBetween} days ago.`;
+        }
+    } else {
+        visitorMessage.textContent = "Welcome! Let us know if you have any questions.";
+    }
+
+    localStorage.setItem("lastVisit", now);
+});
