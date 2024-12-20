@@ -1,7 +1,7 @@
 const menuNav = document.querySelector('#nav');
 const openBtn = document.querySelector('#abrir');
 const closeBtn = document.querySelector('#cerrar');
-const filterLinks = document.querySelectorAll('.nav-list a');
+const filterLinks = document.querySelectorAll('.nav-list a'); 
 
 openBtn.addEventListener('click', () => menuNav.classList.add("visible"));
 closeBtn.addEventListener('click', () => menuNav.classList.remove("visible"));
@@ -15,7 +15,7 @@ lastModifiedElement.textContent = `Document last modified: ${document.lastModifi
 
 const books = [
   {
-    name: "Capital in the Twenty-First Century",
+    name: "Capital in the XXI Century",
     author: "Thomas Piketty",
     release: "2013, August",
     price: 30,
@@ -131,4 +131,25 @@ document.addEventListener('DOMContentLoaded', function() {
   const reviewCount = localStorage.getItem('reviewCount') || 0;
   localStorage.setItem('reviewCount', parseInt(reviewCount) + 1);
   document.getElementById('review-counter').textContent = 'Number of completed reviews: ' + localStorage.getItem('reviewCount');
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const commentForms = document.querySelectorAll('.comment-form');
+
+  commentForms.forEach(form => {
+      form.addEventListener('submit', event => {
+          event.preventDefault();
+
+          const textarea = form.querySelector('textarea');
+          const commentText = textarea.value.trim();
+
+          if (commentText !== '') {
+              const commentsDiv = form.previousElementSibling;
+              const commentElement = document.createElement('p');
+              commentElement.textContent = commentText;
+              commentsDiv.appendChild(commentElement);
+              textarea.value = '';
+          }
+      });
+  });
 });

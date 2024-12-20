@@ -1,0 +1,84 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 - Web Frontend Development I - Jose Manuel Rodas Villarroel - Final Project">
+    <meta name="author" content="Jose Manuel Rodas">
+    <title>Final Project</title>
+    <script src="scripts/javascript.js" defer></script>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/index-large.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header>
+        <h1>Economic Forum WDD - 231</h1>
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+        <nav id="nav" class="nav">
+            <button id="cerrar" class="cerrar-menu"><i class="bi bi-x-lg"></i></button>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Cheapest</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="form.html">Forum</a></li>
+                <li><a href="form.html">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 class="title">Book Discussion Forum</h2>
+        <div class="forum-grid">
+            <div class="forum-section">
+                <h3>Capital in the Twenty-First Century</h3>
+                <p>Author: Thomas Piketty</p>
+                <div class="comments">
+                    <!-- Comments will go here -->
+                </div>
+                <form class="comment-form">
+                    <textarea name="comment" placeholder="Add your comment"></textarea>
+                    <button type="submit">Post Comment</button>
+                </form>
+            </div>
+            <div class="forum-section">
+                <h3>The Wealth of Nations</h3>
+                <p>Author: Adam Smith</p>
+                <div class="comments">
+                    <!-- Comments will go here -->
+                </div>
+                <form class="comment-form">
+                    <textarea name="comment" placeholder="Add your comment"></textarea>
+                    <button type="submit">Post Comment</button>
+                </form>
+            </div>
+            <div class="forum-section">
+                <h3>Thinking, Fast and Slow</h3>
+                <p>Author: Daniel Kahneman</p>
+                <div class="comments">
+                    <!-- Comments will go here -->
+                </div>
+                <form class="comment-form">
+                    <textarea name="comment" placeholder="Add your comment"></textarea>
+                    <button type="submit">Post Comment</button>
+                </form>
+            </div>
+            <div class="forum-section">
+                <h3>The Road to Serfdom</h3>
+                <p>Author: Friedrich Hayek</p>
+                <div class="comments">
+                    <!-- Comments will go here -->
+                </div>
+                <form class="comment-form">
+                    <textarea name="comment" placeholder="Add your comment"></textarea>
+                    <button type="submit">Post Comment</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p id="copyright"></p>
+        <p id="last-modified"></p>
+    </footer>
+</body>
+</html>

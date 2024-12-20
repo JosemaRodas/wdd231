@@ -1,3 +1,14 @@
+:root {
+  --bg-color: #d0e3f1;
+  --primary-color: #1a2a4e;
+  --secondary-color: #243b6c;
+  --highlight-color: #336699;
+  --text-light: #f2f4f8;
+  --text-dark: #09162b;
+  --border-color: #8aa2c1;
+  --hover-color: #1e3a73;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,23 +16,28 @@
 }
 
 body {
-  background-color: #dfdfdf;
-  margin: 0; 
-  padding: 0; 
-  height: 100%; 
+  background-color: var(--bg-color);
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-header { 
-  color: #ffffff;
+header {
+  color: var(--text-light);
   display: flex;
   align-items: center;
-  background-color: #141a35;
+  background-color: var(--primary-color);
   justify-content: space-between;
   padding: 1rem;
+  position: relative;  /* Asegura que el z-index funcione correctamente */
+  z-index: 10;  /* Asegura que el menú tenga prioridad sobre el hero */
+  
 }
 
-nav { 
-  background-color: #155796;
+nav {
+  background-color: var(--secondary-color);
   padding: 10px;
   display: flex;
   justify-content: space-evenly;
@@ -37,11 +53,11 @@ nav {
 
 .nav-list li a {
   text-decoration: none;
-  color: #f2f2f2; 
+  color: var(--text-light);
 }
 
 .nav-list li a:hover {
-  color: #000; 
+  color: var(--text-dark);
 }
 
 .abrir-menu, .cerrar-menu {
@@ -54,12 +70,46 @@ main {
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  z-index: 1;  /* Asegura que el hero no tenga prioridad sobre el header */
+
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;  /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+  aspect-ratio: 16 / 9;  /* Mantiene una relación de aspecto de 16:9 */
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+  display: block;
+  background-color: var(--highlight-color);
+  color: var(--text-light);
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
 }
 
 .title {
-  font-size: 30px;
+  font-size: 2rem;
   text-align: center;
-  padding: 1rem;
+  margin-bottom: 2rem;
 }
 
 .grid {
@@ -70,21 +120,11 @@ main {
   gap: 1rem;
 }
 
-footer {
-  color: #ffffff;
-  margin-top: 1em;
-  border-top: 1px solid #000;
-  text-align: center;
-  background-color: #141a35; 
-  justify-content: space-between;
-  padding: 1rem;
-}
-
 section {
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -93,8 +133,8 @@ section:hover {
 }
 
 section h3 {
-  background-color: #f7f7f7; 
-  color: #333; 
+  background-color: var(--bg-color);
+  color: var(--text-dark);
   padding: 10px;
   margin: 0;
   text-align: center;
@@ -107,51 +147,42 @@ section p {
 
 section img {
   width: 100%;
-  height: 350px;
+  height: auto;
+  aspect-ratio: 3 / 4; 
+  object-fit: cover; 
 }
 
 .label {
   font-weight: bold;
-  color: #000000;
+  color: var(--text-dark);
 }
 
-/* index */
-
-.img1,
-.img2 {
+.img1, .img2 {
   width: 200px;
   height: auto;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid var(--border-color);
   padding: 2px;
   box-shadow: 0 0 30px gray;
   margin: 5px;
-  float: none; 
 }
 
 .card {
   text-align: center;
-  width: auto; 
-  height: auto;
-  margin: 5px;
-  border: 1px solid black;
+  border: 1px solid var(--border-color);
   padding: 2rem;
-  background-color: rgb(255, 255, 255);
-  color: #000;
+  background-color: var(--text-light);
+  color: var(--text-dark);
   border-radius: 10px;
 }
 
 .card-title {
-  text-align: center;
   margin-bottom: 1rem;
   text-decoration: none;
 }
 
-/* about us */
-
 form {
   max-width: 800px;
-  background-color: #a9ceff;
-  width: auto;
+  background-color: var(--highlight-color);
   margin: 20px auto;
   padding: 20px;
   border-radius: 8px;
@@ -160,115 +191,72 @@ form {
 label {
   display: block;
   margin-bottom: 5px;
-  color: #333;
+  color: var(--text-dark);
 }
 
-input[type="text"],
-input[type="date"],
-select,
-textarea {  
-  width: 95%;
+input[type="text"], input[type="date"], select, textarea {
+  width: 100%;
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid #000000;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
 }
 
-.button,
-input[type="submit"] {
-  background-color: #0b0b3e;
-  color: white;
+.button, input[type="submit"] {
+  background-color: var(--primary-color);
+  color: var(--text-light);
   border: none;
-  margin: 10px;
   padding: 10px 20px;
   text-transform: uppercase;
   border-radius: 4px;
   cursor: pointer;
 }
 
-button:hover,
-input[type="submit"]:hover {
-  background-color: #2a3777;
+.button:hover, input[type="submit"]:hover {
+  background-color: var(--hover-color);
 }
 
 .stars {
-  justify-content: space-between;
   display: flex;
-  width: auto;
+  justify-content: space-between;
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 4px;
 }
 
-@media screen and (min-width: 350px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
 }
 
-@media screen and (min-width: 500px) {
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
+.comment-form textarea {
+  resize: vertical;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 0.5rem;
 }
 
-@media screen and (min-width: 650px) {
-  .grid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+.comment-form button {
+  align-self: flex-end;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-@media screen and (min-width: 800px) {
-  .grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-content: center;
-  }
+.comment-form button:hover {
+  background-color: var(--hover-color);
 }
 
-@media (max-width: 768px) {
-  input[type="text"],
-  input[type="date"],
-  select,
-  textarea {
-    width: 100%;
-  }
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
 }
 
-@media screen and (max-width:750px) {
-  .abrir-menu, .cerrar-menu {
-    display: block;
-    border: 0;
-    font-size: 1.2rem;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  .nav {
-    opacity: 0;
-    visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #133555; 
-    padding: 2rem;
-    box-shadow: 0 0 100vmax rgba(0, 0, 0, .5);
-    width: 200px;
-    height: fit-content;
-  }
-
-  .nav.visible {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .nav-list {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-list li a {
-    color: #f2f2f2; 
-  }
-}

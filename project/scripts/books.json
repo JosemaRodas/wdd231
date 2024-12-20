@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Capital in the Twenty-First Century",
+        "author": "Thomas Piketty",
+        "release": "2013, August",
+        "price": 30,
+        "imageUrl": "https://m.media-amazon.com/images/I/61FuwnW2QeL._SL1500_.jpg"
+    },
+    {
+        "name": "The Wealth of Nations",
+        "author": "Adam Smith",
+        "release": "1776, May",
+        "price": 25,
+        "imageUrl": "https://m.media-amazon.com/images/I/71+VNu9VTBL._SL1360_.jpg"
+    },
+    {
+        "name": "Thinking, Fast and Slow",
+        "author": "Daniel Kahneman",
+        "release": "2011, June",
+        "price": 20,
+        "imageUrl": "https://m.media-amazon.com/images/I/61fdrEuPJwL._SL1500_.jpg"
+    },
+    {
+        "name": "The Road to Serfdom",
+        "author": "Friedrich Hayek",
+        "release": "1944, March",
+        "price": 15,
+        "imageUrl": "https://m.media-amazon.com/images/I/51DoPAUNPvL._SL1280_.jpg"
+    }
+]
