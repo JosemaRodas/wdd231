@@ -4,12 +4,11 @@
   box-sizing: border-box;
 }
 
-
-body{
+body {
   background-color: #dfdfdf;
-  margin:0; 
-  padding:0; 
-  height:100%; 
+  margin: 0; 
+  padding: 0; 
+  height: 100%; 
 }
 
 header { 
@@ -49,7 +48,6 @@ nav {
   display: none;
 }
 
-
 main {
   display: flex;
   flex-direction: column;
@@ -80,7 +78,6 @@ footer {
   background-color: #141a35; 
   justify-content: space-between;
   padding: 1rem;
-
 }
 
 section {
@@ -120,8 +117,6 @@ section img {
 
 /* index */
 
-
-
 .img1,
 .img2 {
   width: 200px;
@@ -152,7 +147,6 @@ section img {
 }
 
 /* about us */
-
 
 form {
   max-width: 800px;
@@ -206,3 +200,75 @@ input[type="submit"]:hover {
   border-radius: 4px;
 }
 
+@media screen and (min-width: 350px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  input[type="text"],
+  input[type="date"],
+  select,
+  textarea {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:750px) {
+  .abrir-menu, .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 1.2rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #133555; 
+    padding: 2rem;
+    box-shadow: 0 0 100vmax rgba(0, 0, 0, .5);
+    width: 200px;
+    height: fit-content;
+  }
+
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-list li a {
+    color: #f2f2f2; 
+  }
+}

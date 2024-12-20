@@ -3,42 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Jose Manuel Rodas Villarroel -Final Project">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Jose Manuel Rodas Villarroel - Final Project">
     <meta name="author" content="Jose Manuel Rodas">
     <title>Final Project</title>
     <script src="scripts/javascript.js" defer></script>
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/index-large.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-
 <body>
     <header>
-        <h1>Classic Game Store</h1>
-        <button id= "abrir" class="abrir-menu"> <i class="bi bi-list"></i></button>
-            <nav id= "nav" class="nav">
-        <button id= "cerrar" class="cerrar-menu"><i class="bi bi-x-lg"></i></button>
-                <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="">Old</a></li>
-                    <li><a href="#">New</a></li>
-                    <li><a href="#">cheapest</a></li>
-                    <li><a href="about.html">About us</a></li>
-                    <li><a href="form.html">Reviews</a></li>
-
-                </ul>
-            </nav>
+        <h1>Classic Book Store</h1>
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+        <nav id="nav" class="nav">
+            <button id="cerrar" class="cerrar-menu"><i class="bi bi-x-lg"></i></button>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Cheapest</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="form.html">Reviews</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <h2 class="title">Our Ti  tles:</h2>
+        <h2 class="title">Our Titles:</h2>
         <div class="grid">       
-         </div>
+        </div>
 
-         <div>
+        <div>
             <form method="get" action="review.html">
-                <label for="game-request">Any game request? Please let us know:</label>
-                <input type="text" id="game-request" name="game-request" required>
+                <label for="book-request">Any book request? Please let us know:</label>
+                <input type="text" id="book-request" name="book-request" required>
               
                 <label for="written-review">Written request:</label>
                 <textarea id="written-review" name="written-review"></textarea>
@@ -47,11 +44,10 @@
                 <input type="text" id="user-name" name="user-name">
               
                 <input type="submit" value="Post Request">
-              </form>
-              
-         </div>
-
+            </form>
+        </div>
     </main>
+
     <footer>
         <p id="copyright"></p>
         <p id="last-modified"></p>
