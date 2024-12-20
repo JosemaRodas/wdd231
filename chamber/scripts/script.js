@@ -66,8 +66,3 @@ function displayForecast(forecastData) {
 
 getWeather();
 
-document.addEventListener('DOMContentLoaded', function() {
-    const timestampField = document.getElementById('timestamp');
-    timestampField.value = new Date().toISOString();
-
-    const modals = document.querySelectorAll
